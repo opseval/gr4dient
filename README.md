@@ -38,7 +38,7 @@ The early phases focus on attacking AI; the later phases pivot to using AI as th
 |---|---|---|---|
 | **1 — Foundations** | Three core attack dimensions × three judge architectures | `pers0na`, `p0is0n`, `m3m0ry` | All three written |
 | **2 — Scale and Polish** | Turn the harnesses into something that looks like a product | `f4mily`, `dashb0rd` | Both written; Phase 2 complete |
-| **3 — Adaptive and Agentic** | Difficulty jump — LLMs move to the attack side | `tap0ut`, `c4lhij4ck`, `gu4rdpr0be` | `tap0ut` written; rest forthcoming |
+| **3 — Adaptive and Agentic** | Difficulty jump — LLMs move to the attack side | `tap0ut`, `c4lhij4ck`, `gu4rdpr0be` | `tap0ut` and `c4lhij4ck` written; `gu4rdpr0be` forthcoming |
 | **4 — The Offensive Pivot** | Flip from "red team AI" to "use AI to red team" | `s1ftr`, `expl0rer` | Forthcoming |
 | **5 — Capstone** | A research deliverable that ties everything together | `tr4nsf3r` (attack-transferability paper) | Forthcoming |
 
@@ -66,10 +66,11 @@ The repo grows phase by phase as guides land. Today:
 │   └── dashb0rd-project-guide.md          ← G2.2 (Streamlit benchmark dashboard; Phase 2 complete)
 └── Phase 3 — Adaptive and Agentic/
     ├── README.md
-    └── tap0ut-project-guide.md            ← G3.1 (PAIR-style adaptive multi-turn jailbreak)
+    ├── tap0ut-project-guide.md            ← G3.1 (PAIR-style adaptive multi-turn jailbreak)
+    └── c4lhij4ck-project-guide.md         ← G3.2 (tool-call hijacking via indirect prompt injection)
 ```
 
-Phase 3's remaining guides (`c4lhij4ck`, `gu4rdpr0be`) and Phases 4–5 will appear as their guides are written, in the order shown in the roadmap above.
+Phase 3's remaining guide (`gu4rdpr0be`) and Phases 4–5 will appear as their guides are written, in the order shown in the roadmap above.
 
 ---
 
