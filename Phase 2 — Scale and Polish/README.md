@@ -1,6 +1,6 @@
 # Phase 2 — Scale and Polish
 
-The first two projects of Phase 2. By the end of this phase you have turned the single-target Phase 1 harnesses into something that looks like a product: a multi-vendor benchmark with statistically honest numbers, and a visual report a security architect can read without opening a JSON file.
+The two projects of Phase 2. By the end of this phase you have turned the single-target Phase 1 harnesses into something that looks like a product: a multi-vendor benchmark with statistically honest numbers, and a visual report a security architect can read without opening a JSON file.
 
 ## Theme
 
@@ -9,7 +9,7 @@ Phase 1 built three single-target harnesses — three attack dimensions, three j
 | Project | What's new beyond Phase 1 | Status |
 |---|---|---|
 | `f4mily` | Multi-vendor benchmark across six models from six vendors; OpenRouter as primary path; Wilson 95% confidence intervals on per-target leak rates; first project to actually populate the `target_models` dimension `m3m0ry`'s schema was always designed for. | Written |
-| `dashb0rd` | Reads `runs/<run_id>/summary.json` from `f4mily` and renders a visual report — by-target bar chart with CI whiskers, by-family heatmap. Streamlit-based; the first project that produces a *visual* artifact rather than a JSON one. | Forthcoming |
+| `dashb0rd` | Reads `runs/<run_id>/summary.json` + `trials.jsonl` from `f4mily` and renders a visual report — by-target bar chart with Wilson CI whiskers, family×target heatmap, per-trial drill-through. Streamlit-based; the first project in the series that produces a *visual* artifact rather than a JSON one. | Written |
 
 ## Build order
 
@@ -23,13 +23,13 @@ Fire a curated set of twelve system-prompt-extraction probes — across five tec
 
 **What you learn:** the provider-abstraction pattern via OpenRouter (one SDK, one base URL, six vendors); cross-vendor refusal-style variance and what it means for measurement; small-sample statistical hygiene via the Wilson score interval (hand-rolled — no `scipy`/`statsmodels` dependency); reading a benchmark report like a security architect (point estimate vs. interval, "safer than what?", what `clean` actually means). Maps to **OWASP LLM07 — System Prompt Leakage**, **MITRE ATLAS AML.T0057 — LLM Data Leakage**, and **NIST AI RMF MEASURE**.
 
-### G2.2. [`dashb0rd`](dashb0rd-project-guide.md) — Benchmark Visualization (forthcoming)
+### G2.2. [`dashb0rd`](dashb0rd-project-guide.md) — Benchmark Visualization
 
-**6–8 hours.** Builds on `f4mily`'s output schema.
+**6–8 hours across two sessions.** Builds on `f4mily`'s output schema.
 
-Read one or more `runs/<run_id>/summary.json` files and render a visual report — by-target bar chart with CI whiskers, by-family heatmap, drill-through into trial detail. Streamlit-based. Turns the JSON into an artifact a non-engineer can read without writing a query.
+Read `runs/<run_id>/summary.json` + `trials.jsonl` from a `f4mily` run and render a visual report — by-target bar chart with Wilson 95% CI whiskers, family×target leak-count heatmap with annotated cells, and a per-trial drill-through with multiselect filters and expandable cards showing each probe payload, target response, and judge reasoning. Streamlit-based, single-file app. The fixture-fallback path lets the dashboard render against hand-written `fixtures/summary.json` + `fixtures/trials.jsonl` so students can build the dashboard before they have a real `f4mily` run on disk.
 
-**What you learn:** the Streamlit pattern (declarative reactive Python UI in a single file); CI-whisker plotting with `matplotlib`; the discipline of building visualizations that *do not lie* — overlapping CIs that get drawn as obvious gaps, color choices that don't imply false precision. Maps to **NIST AI RMF MEASURE/MANAGE**: a benchmark that nobody can read is a benchmark that doesn't get measured against.
+**What you learn:** the Streamlit pattern (declarative reactive Python UI in a single file); matplotlib's `errorbar` for asymmetric Wilson CIs and `imshow` for annotated heatmaps; the cache-key discipline of `@st.cache_data` keyed on `(path, mtime)` so re-runs of the upstream harness invalidate cache automatically; the discipline of building visualizations that *do not lie* — overlapping CIs that get drawn as obvious overlaps, single-hue sequential color (no diverging red/green that implies "good model" vs "bad model"), explicit `—` for missing cells instead of silent zero, and `n=N` sample-size labels on every chart so readers don't have to dig through a methods section to understand what the bar means. Maps to **NIST AI RMF MEASURE/MANAGE** (visualization is part of measurement reporting; a benchmark that nobody can read is a benchmark that doesn't get measured against). Appendix A extends the dashboard with a multi-run comparison tab — direct setup for the Phase 5 capstone (`tr4nsf3r`, attack-transferability across runs).
 
 ## What you have at the end of this phase
 

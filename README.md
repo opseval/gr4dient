@@ -37,7 +37,7 @@ The early phases focus on attacking AI; the later phases pivot to using AI as th
 | Phase | Theme | Projects | Status |
 |---|---|---|---|
 | **1 — Foundations** | Three core attack dimensions × three judge architectures | `pers0na`, `p0is0n`, `m3m0ry` | All three written |
-| **2 — Scale and Polish** | Turn the harnesses into something that looks like a product | `f4mily`, `dashb0rd` | `f4mily` written; `dashb0rd` forthcoming |
+| **2 — Scale and Polish** | Turn the harnesses into something that looks like a product | `f4mily`, `dashb0rd` | Both written; Phase 2 complete |
 | **3 — Adaptive and Agentic** | Difficulty jump — LLMs move to the attack side | `tap0ut`, `c4lhij4ck`, `gu4rdpr0be` | Forthcoming |
 | **4 — The Offensive Pivot** | Flip from "red team AI" to "use AI to red team" | `s1ftr`, `expl0rer` | Forthcoming |
 | **5 — Capstone** | A research deliverable that ties everything together | `tr4nsf3r` (attack-transferability paper) | Forthcoming |
@@ -62,7 +62,8 @@ The repo grows phase by phase as guides land. Today:
 │   └── m3m0ry-project-guide.md            ← G1.3 (third guide; Phase 1 complete)
 └── Phase 2 — Scale and Polish/
     ├── README.md
-    └── f4mily-project-guide.md            ← G2.1 (cross-family benchmark; Phase 2 in progress)
+    ├── f4mily-project-guide.md            ← G2.1 (cross-family benchmark)
+    └── dashb0rd-project-guide.md          ← G2.2 (Streamlit benchmark dashboard; Phase 2 complete)
 ```
 
 Phase 3 through 5 directories will appear as their first guides are written, in the order shown in the roadmap above.
