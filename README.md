@@ -39,7 +39,7 @@ The early phases focus on attacking AI; the later phases pivot to using AI as th
 | **1 — Foundations** | Three core attack dimensions × three judge architectures | `pers0na`, `p0is0n`, `m3m0ry` | All three written |
 | **2 — Scale and Polish** | Turn the harnesses into something that looks like a product | `f4mily`, `dashb0rd` | Both written; Phase 2 complete |
 | **3 — Adaptive and Agentic** | Difficulty jump — LLMs move to the attack side | `tap0ut`, `c4lhij4ck`, `gu4rdpr0be` | All three written; Phase 3 complete |
-| **4 — The Offensive Pivot** | Flip from "red team AI" to "use AI to red team" | `s1ftr`, `expl0rer` | `s1ftr` written; `expl0rer` forthcoming |
+| **4 — The Offensive Pivot** | Flip from "red team AI" to "use AI to red team" | `s1ftr`, `expl0rer` | Both written; Phase 4 complete |
 | **5 — Capstone** | A research deliverable that ties everything together | `tr4nsf3r` (attack-transferability paper) | Forthcoming |
 
 Each phase folder has its own README explaining the projects in that phase and the order to build them in.
@@ -71,10 +71,11 @@ The repo grows phase by phase as guides land. Today:
 │   └── gu4rdpr0be-project-guide.md        ← G3.3 (guardrail-classifier probing; Phase 3 complete)
 └── Phase 4 — The Offensive Pivot/
     ├── README.md
-    └── s1ftr-project-guide.md             ← G4.1 (AI-driven OSINT leak-corpus analyst)
+    ├── s1ftr-project-guide.md             ← G4.1 (AI-driven OSINT leak-corpus analyst)
+    └── expl0rer-project-guide.md          ← G4.2 (AI-driven binary-analysis assistant; Phase 4 complete)
 ```
 
-The remainder of Phase 4 (`expl0rer`) and Phase 5 (`tr4nsf3r`) will appear as their guides are written, in the order shown in the roadmap above.
+The capstone (`tr4nsf3r`, Phase 5) will appear as its guide is written, in the order shown in the roadmap above.
 
 ---
 
