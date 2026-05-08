@@ -40,7 +40,7 @@ The early phases focus on attacking AI; the later phases pivot to using AI as th
 | **2 — Scale and Polish** | Turn the harnesses into something that looks like a product | `f4mily`, `dashb0rd` | Both written; Phase 2 complete |
 | **3 — Adaptive and Agentic** | Difficulty jump — LLMs move to the attack side | `tap0ut`, `c4lhij4ck`, `gu4rdpr0be` | All three written; Phase 3 complete |
 | **4 — The Offensive Pivot** | Flip from "red team AI" to "use AI to red team" | `s1ftr`, `expl0rer` | Both written; Phase 4 complete |
-| **5 — Capstone** | A research deliverable that ties everything together | `tr4nsf3r` (attack-transferability paper) | Forthcoming |
+| **5 — Capstone** | A research deliverable that ties everything together | `tr4nsf3r` (attack-transferability paper) | Written; series complete |
 
 Each phase folder has its own README explaining the projects in that phase and the order to build them in.
 
@@ -69,13 +69,16 @@ The repo grows phase by phase as guides land. Today:
 │   ├── tap0ut-project-guide.md            ← G3.1 (PAIR-style adaptive multi-turn jailbreak)
 │   ├── c4lhij4ck-project-guide.md         ← G3.2 (tool-call hijacking via indirect prompt injection)
 │   └── gu4rdpr0be-project-guide.md        ← G3.3 (guardrail-classifier probing; Phase 3 complete)
-└── Phase 4 — The Offensive Pivot/
+├── Phase 4 — The Offensive Pivot/
+│   ├── README.md
+│   ├── s1ftr-project-guide.md             ← G4.1 (AI-driven OSINT leak-corpus analyst)
+│   └── expl0rer-project-guide.md          ← G4.2 (AI-driven binary-analysis assistant; Phase 4 complete)
+└── Phase 5 — Capstone/
     ├── README.md
-    ├── s1ftr-project-guide.md             ← G4.1 (AI-driven OSINT leak-corpus analyst)
-    └── expl0rer-project-guide.md          ← G4.2 (AI-driven binary-analysis assistant; Phase 4 complete)
+    └── tr4nsf3r-project-guide.md          ← G5 (cross-model attack-transferability paper; series complete)
 ```
 
-The capstone (`tr4nsf3r`, Phase 5) will appear as its guide is written, in the order shown in the roadmap above.
+All eleven guides across five phases are now written. The series is complete.
 
 ---
 
